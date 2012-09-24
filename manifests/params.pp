@@ -8,7 +8,7 @@ class vim::params {
       $test_editor_set = "test /etc/alternatives/editor -ef /usr/bin/${editor_name}"
     }
     freebsd: {
-      $package = 'editors/vim-lite'
+      $package = 'vim-lite'
       $set_as_default = false
     }
     default: {
