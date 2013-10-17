@@ -56,6 +56,6 @@ Manage vim via puppet and set it as default editor.
 
 ###* opt_misc
 * Accepted values: array
-* Default: ['hlsearch','showcmd','showmatch','ignorecase','smartcase','incsearch','autowrite','hidden','tabstop=4']
+* Default: ['hlsearch','showcmd','showmatch','ignorecase','smartcase','incsearch','autowrite','hidden']
 * Description: Array containing options that will be set on VIM.
 

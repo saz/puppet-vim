@@ -49,7 +49,7 @@
 #
 #   [*opt_misc*]
 #     Array containing options that will be set on VIM.
-#     Default: ['hlsearch','showcmd','showmatch','ignorecase','smartcase','incsearch','autowrite','hidden','tabstop=4']
+#     Default: ['hlsearch','showcmd','showmatch','ignorecase','smartcase','incsearch','autowrite','hidden']
 #
 # Actions:
 #   Installs vim and, if enabled, set it as default editor.
