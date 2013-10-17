@@ -7,6 +7,10 @@ class vim::params {
       $set_editor_cmd = "update-alternatives --set editor /usr/bin/${editor_name}"
       $test_editor_set = "test /etc/alternatives/editor -ef /usr/bin/${editor_name}"
     }
+    redhat: {
+        $package = 'vim-enhanced'
+        $set_as_default = false
+    }
     freebsd: {
       $package = 'vim-lite'
       $set_as_default = false
