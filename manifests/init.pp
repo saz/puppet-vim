@@ -30,6 +30,27 @@
 #     Only set this, if your platform is not supported or you know, what you're doing.
 #     Default: auto-set, platform specific
 #
+#   [*conf_file*]
+#     VIM's main configuration file.
+#     Default: /etc/vim/vimrc (Debian), /etc/vimrc (RedHat)
+#
+#   [*opt_bg_shading*]
+#     Terminal background colour. This affects the colour scheme used by VIM to do syntax highlighting. 
+#     Valid values are either 'dark' or 'light'.
+#     Default: dark
+#
+#   [*opt_powersave*]
+#     If set to 'true' avoids cursor blinking that might wake up the processor.
+#     Default: true
+#
+#   [*opt_syntax*]
+#     Turns on syntax highlighting if supported by the terminal.
+#     Default: true
+#
+#   [*opt_misc*]
+#     Array containing options that will be set on VIM.
+#     Default: ['hlsearch','showcmd','showmatch','ignorecase','smartcase','incsearch','autowrite','hidden','tabstop=4']
+#
 # Actions:
 #   Installs vim and, if enabled, set it as default editor.
 #
@@ -41,12 +62,17 @@
 #
 # [Remember: No empty lines between comments and class definition]
 class vim(
-  $set_as_default = $vim::params::set_as_default,
-  $ensure = 'present',
-  $autoupgrade = false,
-  $package = $vim::params::package,
-  $set_editor_cmd = $vim::params::set_editor_cmd,
-  $test_editor_set = $vim::params::test_editor_set
+  $set_as_default   = $vim::params::set_as_default,
+  $ensure           = 'present',
+  $autoupgrade      = false,
+  $package          = $vim::params::package,
+  $set_editor_cmd   = $vim::params::set_editor_cmd,
+  $test_editor_set  = $vim::params::test_editor_set,
+  $conf_file        = $vim::params::conf,
+  $opt_bg_shading   = $vim::params::background,
+  $opt_powersave    = $vim::params::powersave,
+  $opt_syntax       = $vim::params::syntax,
+  $opt_misc         = $vim::params::misc,
 ) inherits vim::params {
 
   case $ensure {
@@ -67,6 +93,11 @@ class vim(
 
   package { $package:
     ensure => $package_ensure,
+  }
+
+  file { $conf_file:
+    ensure => $package_ensure,
+    content => template('vim/vimrc.erb'),
   }
 
   if $set_as_default {
