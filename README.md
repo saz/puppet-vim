@@ -86,3 +86,6 @@ node default {
   }
 }
 ```
+
+## Acknowlegments
+This module was forked from the one originally written by Saz (https://github.com/saz/puppet-vim). It adds enterprise linux support and configuration file management, which were not present on the original at the time of the first release.
