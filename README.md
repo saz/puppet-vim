@@ -1,6 +1,10 @@
 # puppet-vim
 
-Manage vim via puppet and set it as default editor.
+Manage VIM via puppet.
+
+Vim is an advanced text editor that seeks to provide the power of the de-facto Unix editor 'Vi', with a more complete feature set. 
+
+This module aims to enable easy installation and configuration of VIM through class parameters on different platforms, in a way that the administrator can easily set it up differently according to need and/or personal taste.
 
 ## Usage
 
@@ -57,5 +61,28 @@ Manage vim via puppet and set it as default editor.
 ###* opt_misc
 * Accepted values: array
 * Default: ['hlsearch','showcmd','showmatch','ignorecase','smartcase','incsearch','autowrite','hidden']
-* Description: Array containing options that will be set on VIM.
+* Description: Array containing options that will be set on VIM. Anything contained here will show as a "set option" line in your virc.
 
+## Sample Usage
+Install VIM and use the provided configuration defaults
+```
+node default {
+  class { 'vim': }
+}
+```
+Turn on line numbering while keeping the default opt_misc values
+```
+node default {
+  class { 'vim':
+    opt_misc => ['hlsearch','showcmd','showmatch','ignorecase','smartcase','incsearch','autowrite','hidden','number'],
+  }
+}
+```
+Uninstall vim
+```
+node default {
+  class { 'vim':
+    ensure => absent,
+  }
+}
+```
