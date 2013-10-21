@@ -1,5 +1,5 @@
-# vimrc: Managed by puppet - DO NOT EDIT
-# Changes manually to this file can, and will, be lost
+" vimrc: Managed by puppet - DO NOT EDIT
+" Changes manually to this file can, and will, be lost
 <% if @osfamily == 'Debian' %>
 runtime! debian.vim
 <% end %>
@@ -12,7 +12,7 @@ endif
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
   autocmd BufNewFile,BufReadPre /media/*,/mnt/* set directory=~/tmp,/var/tmp,/tmp
-  filetype plugin ident on
+  filetype plugin indent on
 endif
 
 <% @opt_misc.each do |option| -%>
