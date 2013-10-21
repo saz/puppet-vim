@@ -1,5 +1,5 @@
 name    'diegolima-vim'
-version '1.0.0'
+version '1.0.1'
 author 'diegolima'
 license 'Apache License, Version 2.0'
 summary 'Manage VIM via puppet.'
