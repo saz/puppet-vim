@@ -35,7 +35,7 @@
 #     Default: /etc/vim/vimrc (Debian), /etc/vimrc (RedHat)
 #
 #   [*opt_bg_shading*]
-#     Terminal background colour. This affects the colour scheme used by VIM to do syntax highlighting. 
+#     Terminal background colour. This affects the colour scheme used by VIM to do syntax highlighting.
 #     Valid values are either 'dark' or 'light'.
 #     Default: dark
 #
@@ -82,9 +82,11 @@ class vim(
       } else {
         $package_ensure = 'present'
       }
+      $file_ensure = 'file'
     }
     /(absent)/: {
       $package_ensure = 'absent'
+      $file_ensure = 'absent'
     }
     default: {
       fail('ensure parameter must be present or absent')
@@ -96,7 +98,7 @@ class vim(
   }
 
   file { $conf_file:
-    ensure => $package_ensure,
+    ensure  => $file_ensure,
     content => template('vim/vimrc.erb'),
   }
 
