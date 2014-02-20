@@ -1,6 +1,7 @@
 class vim::params {
   $background   = 'dark'
   $lastposition = true
+  $indent       = true
   $powersave    = true
   $syntax       = true
   $misc         = ['hlsearch','showcmd','showmatch','ignorecase','smartcase','incsearch','autowrite','hidden']
