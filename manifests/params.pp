@@ -1,8 +1,9 @@
 class vim::params {
-  $background = 'dark'
-  $powersave  = true
-  $syntax     = true
-  $misc       = ['hlsearch','showcmd','showmatch','ignorecase','smartcase','incsearch','autowrite','hidden']
+  $background   = 'dark'
+  $lastposition = true
+  $powersave    = true
+  $syntax       = true
+  $misc         = ['hlsearch','showcmd','showmatch','ignorecase','smartcase','incsearch','autowrite','hidden']
   case $::osfamily {
     debian: {
       $package         = 'vim-nox'
