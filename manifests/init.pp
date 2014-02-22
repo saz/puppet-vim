@@ -39,6 +39,14 @@
 #     Valid values are either 'dark' or 'light'.
 #     Default: dark
 #
+#   [*opt_indent*]
+#     If true, Vim loads indentation rules and plugins according to the detected filetype.
+#     Default: true
+#
+#   [*opt_lastposition*]
+#     If true, Vim jumps to the last known position when reopening a file.
+#     Default: true
+#
 #   [*opt_powersave*]
 #     If set to 'true' avoids cursor blinking that might wake up the processor.
 #     Default: true
@@ -70,6 +78,8 @@ class vim(
   $test_editor_set  = $vim::params::test_editor_set,
   $conf_file        = $vim::params::conf,
   $opt_bg_shading   = $vim::params::background,
+  $opt_indent       = $vim::params::indent,
+  $opt_lastposition = $vim::params::lastposition,
   $opt_powersave    = $vim::params::powersave,
   $opt_syntax       = $vim::params::syntax,
   $opt_misc         = $vim::params::misc,

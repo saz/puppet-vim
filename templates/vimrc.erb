@@ -10,10 +10,10 @@ if has("syntax")
 endif
 <% end %>
 if has("autocmd")
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-  autocmd BufNewFile,BufReadPre /media/*,/mnt/* set directory=~/tmp,/var/tmp,/tmp
-  filetype plugin indent on
-endif
+<% if @opt_lastposition %>  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+<% end %>  autocmd BufNewFile,BufReadPre /media/*,/mnt/* set directory=~/tmp,/var/tmp,/tmp
+<% if @opt_indent %>  filetype plugin indent on
+<% end %>endif
 
 <% @opt_misc.each do |option| -%>
 set <%= option %>
