@@ -1,5 +1,5 @@
 name    'saz-vim'
-version '2.0.3'
+version '2.1.0'
 author 'saz'
 license 'Apache License, Version 2.0'
 summary 'Manage VIM via puppet.'
