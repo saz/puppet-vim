@@ -48,6 +48,16 @@ This module aims to enable easy installation and configuration of VIM through cl
 * Default: dark
 * Description: Terminal background colour. This affects the colour scheme used by VIM to do syntax highlighting.
 
+###* opt_indent
+* Accepted values: true or false
+* Default: true
+* Description: If true, Vim loads indentation rules and plugins according to the detected filetype.
+
+###* opt_lastposition
+* Accepted values: true or false
+* Default: true
+* Description: If true, Vim jumps to the last known position when reopening a file.
+
 ###* opt_powersave
 * Accepted values: true or false
 * Default: true
