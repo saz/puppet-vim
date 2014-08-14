@@ -23,6 +23,11 @@ class vim::params {
       $package        = 'vim-lite'
       $set_as_default = false
     }
+    suse: {
+      $package        = 'vim'
+      $set_as_default = false
+      $conf           = '/etc/vimrc'
+    }
     default: {
       case $::operatingsystem {
         default: {
