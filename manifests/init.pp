@@ -83,7 +83,7 @@ class vim(
   $opt_powersave    = $vim::params::powersave,
   $opt_syntax       = $vim::params::syntax,
   $opt_misc         = $vim::params::misc,
-  $opt_maps         = {},
+  $opt_maps         = $vim::params::maps,
 ) inherits vim::params {
 
   case $ensure {
