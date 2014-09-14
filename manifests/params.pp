@@ -5,6 +5,7 @@ class vim::params {
   $powersave    = true
   $syntax       = true
   $misc         = ['hlsearch','showcmd','showmatch','ignorecase','smartcase','incsearch','autowrite','hidden']
+  $maps         = {}
   case $::osfamily {
     debian: {
       $package         = 'vim-nox'

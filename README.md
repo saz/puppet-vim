@@ -71,7 +71,12 @@ This module aims to enable easy installation and configuration of VIM through cl
 ###* opt_misc
 * Accepted values: array
 * Default: ['hlsearch','showcmd','showmatch','ignorecase','smartcase','incsearch','autowrite','hidden']
-* Description: Array containing options that will be set on VIM. Anything contained here will show as a "set option" line in your virc.
+* Description: Array containing options that will be set on VIM. Anything contained here will show as a "set option" line in your vimrc.
+
+###* opt_maps
+* Accepted values: hash
+* Default: {}
+* Description: Hash containing keybinds for use in "map <k> <v>" lines in your vimrc.
 
 ## Sample Usage
 Install VIM and use the provided configuration defaults
@@ -85,6 +90,14 @@ Turn on line numbering while keeping the default opt_misc values
 node default {
   class { 'vim':
     opt_misc => ['hlsearch','showcmd','showmatch','ignorecase','smartcase','incsearch','autowrite','hidden','number'],
+  }
+}
+```
+Set F5 key to save and execute current file
+```
+node default {
+  class { 'vim':
+    opt_maps => { '<F5>': '<Esc>:w<CR>:!%:p<CR>' },
   }
 }
 ```
