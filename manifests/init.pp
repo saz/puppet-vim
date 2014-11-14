@@ -119,7 +119,7 @@ class vim(
 
   if $set_as_default {
     exec { $set_editor_cmd:
-      path    => '/usr/bin:/usr/sbin',
+      path    => '/bin:/sbin:/usr/bin:/usr/sbin',
       unless  => $test_editor_set,
       require => Package[$package],
     }
