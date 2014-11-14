@@ -29,6 +29,13 @@ class vim::params {
       $set_as_default = false
       $conf           = '/etc/vimrc'
     }
+    gentoo: {
+      $package         = 'app-editors/vim'
+      $set_as_default  = true
+      $set_editor_cmd  = 'eselect editor set /usr/bin/vim'
+      $test_editor_set = 'eselect editor show|grep /usr/bin/vim'
+      $conf            = '/etc/vimrc'
+    }
     default: {
       case $::operatingsystem {
         default: {
