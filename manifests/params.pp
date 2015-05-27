@@ -40,10 +40,20 @@ class vim::params {
       $test_editor_set = 'eselect editor show|grep /usr/bin/vim'
       $conf            = '/etc/vimrc'
     }
+    solaris: {
+      if($::operatingsystemrelease =~ /^(5\.11|11|11\.\d+)$/){
+        $package        = '/editor/vim'
+        $conf           = '/usr/share/vim/vimrc'
+        $set_as_default = false
+      }else{
+        fail("vim::params: Unsupported platform: ${::osfamily}/${::operatingsystemrelease}")
+      }
+    }
+    
     default: {
       case $::operatingsystem {
         default: {
-          fail("Unsupported platform: ${::osfamily}/${::operatingsystem}")
+          fail("vim::params: Unsupported platform: ${::osfamily}/${::operatingsystem}")
         }
       }
     }
