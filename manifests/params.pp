@@ -4,6 +4,7 @@ class vim::params {
   $backspace    = "2"
   $lastposition = true
   $indent       = true
+  $matchparen   = true
   $powersave    = true
   $ruler        = false
   $syntax       = true

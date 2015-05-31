@@ -55,6 +55,10 @@
 #     If true, Vim jumps to the last known position when reopening a file.
 #     Default: true
 #
+#   [*opt_matchparen*]
+#     If true and syntax is on, putting your cursor on a paren/brace/bracket will highlight its pair.
+#     Default: true
+#
 #   [*opt_powersave*]
 #     If set to 'true' avoids cursor blinking that might wake up the processor.
 #     Default: true
@@ -98,6 +102,7 @@ class vim(
   $opt_bg_shading   = $vim::params::background,
   $opt_indent       = $vim::params::indent,
   $opt_lastposition = $vim::params::lastposition,
+  $opt_matchparen   = $vim::params::matchparen,
   $opt_powersave    = $vim::params::powersave,
   $opt_ruler        = $vim::params::ruler,
   $opt_syntax       = $vim::params::syntax,

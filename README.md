@@ -68,6 +68,11 @@ This module aims to enable easy installation and configuration of VIM through cl
 * Default: true
 * Description: If true, Vim jumps to the last known position when reopening a file.
 
+###* opt_matchparen
+* Accepted values: true or false
+* Default: true
+* Description: If true and syntax is on, putting your cursor on a paren/brace/bracket will highlight its pair.
+
 ###* opt_powersave
 * Accepted values: true or false
 * Default: true

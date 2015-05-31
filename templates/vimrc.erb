@@ -47,6 +47,10 @@ map <%= k %> <%= v %>
 <%   end -%>
 
 <% end -%>
+<% # This is on by default and only needs a rule to turn it off
+   unless @opt_matchparen -%>
+let loaded_matchparen=1
+<% end -%>
 <% if @opt_powersave -%>
 let &guicursor = &guicursor . ",a:blinkon0"
 <% end -%>
