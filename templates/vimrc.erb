@@ -27,6 +27,9 @@ if has("autocmd")
 endif
 
 <% end -%>
+<% unless @opt_backspace.empty? -%>
+set backspace=<%= @opt_backspace %>
+<% end -%>
 <% # Only print these if the array has at least one non-nil/non-empty value
    unless @opt_misc.all? &:nil?
      @opt_misc.each do |option| -%>

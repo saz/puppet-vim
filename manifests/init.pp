@@ -38,6 +38,10 @@
 #     If true, "set nocompatible" is added to the top of the vimrc
 #     Default: true
 #
+#   [*opt_backspace*]
+#     Set the behavior of the backspace key in insert mode.
+#     Default: 2
+#
 #   [*opt_bg_shading*]
 #     Terminal background colour. This affects the colour scheme used by VIM to do syntax highlighting.
 #     Valid values are either 'dark' or 'light'.
@@ -86,6 +90,7 @@ class vim(
   $test_editor_set  = $vim::params::test_editor_set,
   $conf_file        = $vim::params::conf,
   $opt_nocompatible = $vim::params::nocompatible,
+  $opt_backspace    = $vim::params::backspace,
   $opt_bg_shading   = $vim::params::background,
   $opt_indent       = $vim::params::indent,
   $opt_lastposition = $vim::params::lastposition,

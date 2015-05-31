@@ -48,6 +48,11 @@ This module aims to enable easy installation and configuration of VIM through cl
 * Default: true
 * Description: If true, "set nocompatible" is added to the top of the vimrc.
 
+###* opt_backspace
+* Accepted values: string
+* Default: 2
+* Description: Set the behavior of the backspace key in insert mode.
+
 ###* opt_bg_shading
 * Accepted values: dark or light
 * Default: dark

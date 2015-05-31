@@ -1,6 +1,7 @@
 class vim::params {
   $nocompatible = true
   $background   = 'dark'
+  $backspace    = "2"
   $lastposition = true
   $indent       = true
   $powersave    = true
