@@ -43,6 +43,11 @@ This module aims to enable easy installation and configuration of VIM through cl
 * Default: /etc/vim/vimrc (Debian), /etc/vimrc (RedHat)
 * Description: Path to VIM's main configuration file.
 
+###* opt_nocompatible
+* Accepted values: true or false
+* Default: true
+* Description: If true, "set nocompatible" is added to the top of the vimrc.
+
 ###* opt_bg_shading
 * Accepted values: dark or light
 * Default: dark

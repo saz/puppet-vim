@@ -1,6 +1,10 @@
 " vimrc: Managed by puppet - DO NOT EDIT
 " Changes manually to this file can, and will, be lost
 
+<% if @opt_nocompatible -%>
+set nocompatible
+
+<% end -%>
 <% if @osfamily == 'Debian' -%>
 runtime! debian.vim
 

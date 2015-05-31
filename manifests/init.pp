@@ -34,6 +34,10 @@
 #     VIM's main configuration file.
 #     Default: /etc/vim/vimrc (Debian), /etc/vimrc (RedHat)
 #
+#   [*opt_nocompatible*]
+#     If true, "set nocompatible" is added to the top of the vimrc
+#     Default: true
+#
 #   [*opt_bg_shading*]
 #     Terminal background colour. This affects the colour scheme used by VIM to do syntax highlighting.
 #     Valid values are either 'dark' or 'light'.
@@ -81,6 +85,7 @@ class vim(
   $set_editor_cmd   = $vim::params::set_editor_cmd,
   $test_editor_set  = $vim::params::test_editor_set,
   $conf_file        = $vim::params::conf,
+  $opt_nocompatible = $vim::params::nocompatible,
   $opt_bg_shading   = $vim::params::background,
   $opt_indent       = $vim::params::indent,
   $opt_lastposition = $vim::params::lastposition,

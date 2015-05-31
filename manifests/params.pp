@@ -1,4 +1,5 @@
 class vim::params {
+  $nocompatible = true
   $background   = 'dark'
   $lastposition = true
   $indent       = true
