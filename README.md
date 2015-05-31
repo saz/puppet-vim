@@ -73,6 +73,11 @@ This module aims to enable easy installation and configuration of VIM through cl
 * Default: true
 * Description: If set to 'true' avoids cursor blinking that might wake up the processor.
 
+###* opt_ruler
+* Accepted values: true or false
+* Default: false
+* Description: Turns on the ruler.
+
 ###* opt_syntax
 * Accepted values: true or false
 * Default: true

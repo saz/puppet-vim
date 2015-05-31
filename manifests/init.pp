@@ -59,6 +59,10 @@
 #     If set to 'true' avoids cursor blinking that might wake up the processor.
 #     Default: true
 #
+#   [*opt_ruler*]
+#     Turns on the ruler.
+#     Default: false
+#
 #   [*opt_syntax*]
 #     Turns on syntax highlighting if supported by the terminal.
 #     Default: true
@@ -95,6 +99,7 @@ class vim(
   $opt_indent       = $vim::params::indent,
   $opt_lastposition = $vim::params::lastposition,
   $opt_powersave    = $vim::params::powersave,
+  $opt_ruler        = $vim::params::ruler,
   $opt_syntax       = $vim::params::syntax,
   $opt_misc         = $vim::params::misc,
   $opt_maps         = $vim::params::maps,

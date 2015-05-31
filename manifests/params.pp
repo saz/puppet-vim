@@ -5,6 +5,7 @@ class vim::params {
   $lastposition = true
   $indent       = true
   $powersave    = true
+  $ruler        = false
   $syntax       = true
   $misc         = ['hlsearch','showcmd','showmatch','ignorecase','smartcase','incsearch','autowrite','hidden']
   $maps         = {}
