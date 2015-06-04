@@ -1,8 +1,12 @@
 class vim::params {
+  $nocompatible = true
   $background   = 'dark'
+  $backspace    = "2"
   $lastposition = true
   $indent       = true
+  $matchparen   = true
   $powersave    = true
+  $ruler        = false
   $syntax       = true
   $misc         = ['hlsearch','showcmd','showmatch','ignorecase','smartcase','incsearch','autowrite','hidden']
   $maps         = {}

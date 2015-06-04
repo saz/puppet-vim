@@ -34,6 +34,14 @@
 #     VIM's main configuration file.
 #     Default: /etc/vim/vimrc (Debian), /etc/vimrc (RedHat)
 #
+#   [*opt_nocompatible*]
+#     If true, "set nocompatible" is added to the top of the vimrc
+#     Default: true
+#
+#   [*opt_backspace*]
+#     Set the behavior of the backspace key in insert mode.
+#     Default: 2
+#
 #   [*opt_bg_shading*]
 #     Terminal background colour. This affects the colour scheme used by VIM to do syntax highlighting.
 #     Valid values are either 'dark' or 'light'.
@@ -47,9 +55,17 @@
 #     If true, Vim jumps to the last known position when reopening a file.
 #     Default: true
 #
+#   [*opt_matchparen*]
+#     If true and syntax is on, putting your cursor on a paren/brace/bracket will highlight its pair.
+#     Default: true
+#
 #   [*opt_powersave*]
 #     If set to 'true' avoids cursor blinking that might wake up the processor.
 #     Default: true
+#
+#   [*opt_ruler*]
+#     Turns on the ruler.
+#     Default: false
 #
 #   [*opt_syntax*]
 #     Turns on syntax highlighting if supported by the terminal.
@@ -81,10 +97,14 @@ class vim(
   $set_editor_cmd   = $vim::params::set_editor_cmd,
   $test_editor_set  = $vim::params::test_editor_set,
   $conf_file        = $vim::params::conf,
+  $opt_nocompatible = $vim::params::nocompatible,
+  $opt_backspace    = $vim::params::backspace,
   $opt_bg_shading   = $vim::params::background,
   $opt_indent       = $vim::params::indent,
   $opt_lastposition = $vim::params::lastposition,
+  $opt_matchparen   = $vim::params::matchparen,
   $opt_powersave    = $vim::params::powersave,
+  $opt_ruler        = $vim::params::ruler,
   $opt_syntax       = $vim::params::syntax,
   $opt_misc         = $vim::params::misc,
   $opt_maps         = $vim::params::maps,

@@ -43,6 +43,16 @@ This module aims to enable easy installation and configuration of VIM through cl
 * Default: /etc/vim/vimrc (Debian), /etc/vimrc (RedHat)
 * Description: Path to VIM's main configuration file.
 
+###* opt_nocompatible
+* Accepted values: true or false
+* Default: true
+* Description: If true, "set nocompatible" is added to the top of the vimrc.
+
+###* opt_backspace
+* Accepted values: string
+* Default: 2
+* Description: Set the behavior of the backspace key in insert mode.
+
 ###* opt_bg_shading
 * Accepted values: dark or light
 * Default: dark
@@ -58,10 +68,20 @@ This module aims to enable easy installation and configuration of VIM through cl
 * Default: true
 * Description: If true, Vim jumps to the last known position when reopening a file.
 
+###* opt_matchparen
+* Accepted values: true or false
+* Default: true
+* Description: If true and syntax is on, putting your cursor on a paren/brace/bracket will highlight its pair.
+
 ###* opt_powersave
 * Accepted values: true or false
 * Default: true
 * Description: If set to 'true' avoids cursor blinking that might wake up the processor.
+
+###* opt_ruler
+* Accepted values: true or false
+* Default: false
+* Description: Turns on the ruler.
 
 ###* opt_syntax
 * Accepted values: true or false
