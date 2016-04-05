@@ -98,6 +98,11 @@ This module aims to enable easy installation and configuration of VIM through cl
 * Default: {}
 * Description: Hash containing keybinds for use in "map <k> <v>" lines in your vimrc.
 
+###* opt_code
+* Accepted values: Array
+* Default: []
+* Description: Array containing custom lines in your vimrc.
+
 ## Sample Usage
 Install VIM and use the provided configuration defaults
 ```

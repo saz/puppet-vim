@@ -39,6 +39,10 @@ set ruler
 set <%= option %>
 <%   end -%>
 
+<% @opt_code.each do |codeblock| -%>
+<%=codeblock %>
+<% end -%>
+
 <% end -%>
 <% # Only print these if the hash has at least one non-nil/non-empty value
    unless @opt_maps.all? &:nil?
