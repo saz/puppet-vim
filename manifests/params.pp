@@ -10,6 +10,7 @@ class vim::params {
   $syntax       = true
   $misc         = ['hlsearch','showcmd','showmatch','ignorecase','smartcase','incsearch','autowrite','hidden']
   $maps         = {}
+  $code         = []
   case $::osfamily {
     debian: {
       $package         = 'vim-nox'

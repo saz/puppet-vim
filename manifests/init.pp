@@ -108,6 +108,7 @@ class vim(
   $opt_syntax       = $vim::params::syntax,
   $opt_misc         = $vim::params::misc,
   $opt_maps         = $vim::params::maps,
+  $opt_code         = $vim::params::code,
 ) inherits vim::params {
 
   case $ensure {
