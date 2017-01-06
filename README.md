@@ -1,4 +1,4 @@
-# puppet-vim
+# puppet-vim [![Build Status](https://secure.travis-ci.org/saz/puppet-vim.png)](https://travis-ci.org/saz/puppet-vim)
 
 Manage VIM via puppet.
 
