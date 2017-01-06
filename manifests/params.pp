@@ -23,15 +23,18 @@ class vim::params {
     'RedHat': {
       $package        = 'vim-enhanced'
       $set_as_default = false
+      $set_editor_cmd = undef
       $conf           = '/etc/vimrc'
     }
     'FreeBSD': {
       $package        = 'vim-lite'
       $set_as_default = false
+      $set_editor_cmd = undef
     }
     'Suse': {
       $package        = 'vim'
       $set_as_default = false
+      $set_editor_cmd = undef
       $conf           = '/etc/vimrc'
     }
     'Gentoo': {
@@ -46,6 +49,7 @@ class vim::params {
         $package        = '/editor/vim'
         $conf           = '/usr/share/vim/vimrc'
         $set_as_default = false
+        $set_editor_cmd = undef
       }else{
         fail("vim::params: Unsupported platform: ${::osfamily}/${::operatingsystemrelease}")
       }
