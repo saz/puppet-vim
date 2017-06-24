@@ -7,7 +7,8 @@ Vim is an advanced text editor that seeks to provide the power of the de-facto U
 This module aims to enable easy installation and configuration of VIM through class parameters on different platforms, in a way that the administrator can easily set it up differently according to need and/or personal taste.
 
 ### Supported Puppet versions
-* Puppet >= 3
+* Puppet >= 4
+* Last version supporting Puppet 3: v2.6.0
 
 ## Usage
 
