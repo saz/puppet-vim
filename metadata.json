@@ -1,6 +1,6 @@
 {
   "name": "saz-vim",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "author": "saz",
   "summary": "Manage VIM via puppet.",
   "license": "Apache-2.0",
