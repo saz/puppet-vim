@@ -21,21 +21,24 @@ class vim::params {
       $conf            = '/etc/vim/vimrc'
     }
     'RedHat': {
-      $package        = 'vim-enhanced'
-      $set_as_default = false
-      $set_editor_cmd = undef
-      $conf           = '/etc/vimrc'
+      $package         = 'vim-enhanced'
+      $set_as_default  = false
+      $set_editor_cmd  = undef
+      $test_editor_set = undef
+      $conf            = '/etc/vimrc'
     }
     'FreeBSD': {
-      $package        = 'vim-lite'
-      $set_as_default = false
-      $set_editor_cmd = undef
+      $package         = 'vim-lite'
+      $set_as_default  = false
+      $set_editor_cmd  = undef
+      $test_editor_set = undef
     }
     'Suse': {
-      $package        = 'vim'
-      $set_as_default = false
-      $set_editor_cmd = undef
-      $conf           = '/etc/vimrc'
+      $package         = 'vim'
+      $set_as_default  = false
+      $set_editor_cmd  = undef
+      $test_editor_set = undef
+      $conf            = '/etc/vimrc'
     }
     'Gentoo': {
       $package         = 'app-editors/vim'
@@ -46,10 +49,11 @@ class vim::params {
     }
     'Solaris': {
       if($::operatingsystemrelease =~ /^(5\.11|11|11\.\d+)$/){
-        $package        = '/editor/vim'
-        $conf           = '/usr/share/vim/vimrc'
-        $set_as_default = false
-        $set_editor_cmd = undef
+        $package         = '/editor/vim'
+        $conf            = '/usr/share/vim/vimrc'
+        $set_as_default  = false
+        $set_editor_cmd  = undef
+        $test_editor_set = undef
       }else{
         fail("vim::params: Unsupported platform: ${::osfamily}/${::operatingsystemrelease}")
       }
