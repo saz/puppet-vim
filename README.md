@@ -1,4 +1,4 @@
-# puppet-vim [![Build Status](https://secure.travis-ci.org/saz/puppet-vim.png)](https://travis-ci.org/saz/puppet-vim)
+# puppet-vim [![Puppet Forge](http://img.shields.io/puppetforge/v/saz/vim.svg)](https://forge.puppet.com/modules/saz/vim) [![Build Status](https://secure.travis-ci.org/saz/puppet-vim.png)](https://travis-ci.org/saz/puppet-vim)
 
 Manage VIM via puppet.
 
