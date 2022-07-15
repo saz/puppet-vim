@@ -136,6 +136,7 @@ class vim (
   file { $conf_file:
     ensure  => $file_ensure,
     content => template('vim/vimrc.erb'),
+    require => Package[$package],
   }
 
   if $set_as_default and $set_editor_cmd {
