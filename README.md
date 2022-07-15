@@ -1,14 +1,10 @@
-# puppet-vim [![Puppet Forge](http://img.shields.io/puppetforge/v/saz/vim.svg)](https://forge.puppet.com/modules/saz/vim) [![Build Status](https://secure.travis-ci.org/saz/puppet-vim.png)](https://travis-ci.org/saz/puppet-vim)
+# puppet-vim [![Puppet Forge](http://img.shields.io/puppetforge/v/saz/vim.svg)](https://forge.puppet.com/modules/saz/vim) [![CI](https://github.com/saz/puppet-vim/actions/workflows/ci.yml/badge.svg)](https://github.com/saz/puppet-vim/actions/workflows/ci.yml)
 
 Manage VIM via puppet.
 
-Vim is an advanced text editor that seeks to provide the power of the de-facto Unix editor 'Vi', with a more complete feature set. 
+Vim is an advanced text editor that seeks to provide the power of the de-facto Unix editor 'Vi', with a more complete feature set.
 
 This module aims to enable easy installation and configuration of VIM through class parameters on different platforms, in a way that the administrator can easily set it up differently according to need and/or personal taste.
-
-### Supported Puppet versions
-* Puppet >= 4
-* Last version supporting Puppet 3: v2.6.0
 
 ## Usage
 

@@ -11,7 +11,7 @@ class vim::params {
   $misc         = ['hlsearch','showcmd','showmatch','ignorecase','smartcase','incsearch','autowrite','hidden']
   $maps         = {}
   $code         = []
-  case $::osfamily {
+  case $facts['os']['family'] {
     'Debian': {
       $package         = 'vim-nox'
       $editor_name     = 'vim.nox'
@@ -56,20 +56,20 @@ class vim::params {
       $conf            = '/etc/vimrc'
     }
     'Solaris': {
-      if($::operatingsystemrelease =~ /^(5\.11|11|11\.\d+)$/){
+      if ($facts['os']['release']['full'] =~ /^(5\.11|11|11\.\d+)$/) {
         $package         = '/editor/vim'
         $conf            = '/usr/share/vim/vimrc'
         $set_as_default  = false
         $set_editor_cmd  = undef
         $test_editor_set = undef
-      }else{
-        fail("vim::params: Unsupported platform: ${::osfamily}/${::operatingsystemrelease}")
+      } else {
+        fail("vim::params: Unsupported platform: ${facts['os']['family']}/${facts['os']['release']['full']}")
       }
     }
     default: {
-      case $::operatingsystem {
+      case $facts['os']['name'] {
         default: {
-          fail("vim::params: Unsupported platform: ${::osfamily}/${::operatingsystem}")
+          fail("vim::params: Unsupported platform: ${facts['os']['family']}/${facts['os']['name']}")
         }
       }
     }
