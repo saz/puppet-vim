@@ -89,7 +89,7 @@
 #   class { 'vim': }
 #
 # [Remember: No empty lines between comments and class definition]
-class vim(
+class vim (
   String           $ensure            = 'present',
   Boolean          $autoupgrade       = false,
   Integer          $skip_defaults_vim = 1,
@@ -111,7 +111,6 @@ class vim(
   Hash             $opt_maps          = $vim::params::maps,
   Array            $opt_code          = $vim::params::code,
 ) inherits vim::params {
-
   case $ensure {
     /(present)/: {
       if $autoupgrade == true {
