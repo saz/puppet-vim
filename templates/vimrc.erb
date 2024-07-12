@@ -7,7 +7,7 @@ let skip_defaults_vim=<%= @skip_defaults_vim %>
 set nocompatible
 
 <% end -%>
-<% if @osfamily == 'Debian' -%>
+<% if @os['family'] == 'Debian' -%>
 runtime! debian.vim
 
 <% end -%>
@@ -60,7 +60,7 @@ let loaded_matchparen=1
 <% if @opt_powersave -%>
 let &guicursor = &guicursor . ",a:blinkon0"
 <% end -%>
-<% if @osfamily == 'Debian' -%>
+<% if @os['family'] == 'Debian' -%>
 
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
